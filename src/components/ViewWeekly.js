@@ -18,16 +18,16 @@ const ViewWeekly = () => {
 	const getPreviousDates = () => {
 		const currentDate = new Date();
 		const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-		const getPreviousDates = [];
+		const previousDates = [];
 		for (let i = 6; i >= 0; i--) {
 			const prevDate = new Date(currentDate);
 			prevDate.setDate(currentDate.getDate() -1);
 			const dayOfWeek = days[prevDate.getDate()];
 			const date = prevDate.getDate();
 			const month = prevDate.getMonth() +1;
-			getPreviousDates.push( {dayOfWeek, date, month });
+			previousDates.push( {dayOfWeek, date, month });
 		}
-		return getPreviousDates;
+		return previousDates;
 	};
 
 	const previousDates = getPreviousDates();
