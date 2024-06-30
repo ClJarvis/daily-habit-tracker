@@ -6,7 +6,7 @@ const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-success">
 			<div className="conatiner">
-				<Link className="navbar-brand" to="/">Habit Tracker >
+				<Link className="navbar-brand" to="/">Habit Tracker
 				</Link>
 			<div className="collapse navbar-collapse">
 				<ul className="navbar-nav mr-auto">

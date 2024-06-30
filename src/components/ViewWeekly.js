@@ -21,11 +21,11 @@ const ViewWeekly = () => {
 		const previousDates = [];
 		for (let i = 6; i >= 0; i--) {
 			const prevDate = new Date(currentDate);
-			prevDate.setDate(currentDate.getDate() -1);
+			prevDate.setDate(currentDate.getDate() - i);
 			const dayOfWeek = days[prevDate.getDate()];
 			const date = prevDate.getDate();
 			const month = prevDate.getMonth() +1;
-			previousDates.push( {dayOfWeek, date, month });
+			previousDates.push({dayOfWeek, date, month });
 		}
 		return previousDates;
 	};

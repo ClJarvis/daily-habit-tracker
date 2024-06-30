@@ -1,6 +1,7 @@
-//import logo from './logo.svg';
 import './App.css';
+// eslint-disable-next-line 
 import React, { useState, useEffect } from 'react';
+// eslint-disable-next-line 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './Components/NavBar';
@@ -12,10 +13,12 @@ const App = () => {
     <>
       <NavBar />
       <div className="container mt-5">
+      <Router>
         <Routes>
-          <Route path="/" element={<AddHabit />} />
-          <Route path="/view-weekly" element ={<ViewWeekly />} />
+          <Route exact path="/" element={<AddHabit />} />
+          <Route exact path="/view-weekly" element={<ViewWeekly />} />
         </Routes>
+        </Router>
       </div>
     </>
     );
