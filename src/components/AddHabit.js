@@ -32,7 +32,7 @@ const handleSubmit = (e) => {
 		} else {
 			setHabits([...habits, { name: habit, description, status: { Monday: false, Tuesday: false, Wednesday: false, Thursday: false, Friday: false, Saturday: false, Sunday: false } }]);
 		}
-		setHabits('');
+		setHabit('');
 		setDescription('');
 	};
 
@@ -61,8 +61,17 @@ return (
 					onChange={ (e) => setHabit(e.target.value)}
 				/>
 			</div>
+			<div className="mb-3">
+				<input
+					type="textarea"
+					className="form-control"
+					placeholder="Enter habit description"
+					value={description}
+					onChange={(e) => setDescription(e.target.value)} 
+				/>
+				</div>
 			<button type="submit" className="btn btn-primary">
-				{editIndex != null ? 'Save' : 'Add'}
+				{editIndex !== null ? 'Save' : 'Add'}
 			</button>
 		</form>
 		<table className="table">

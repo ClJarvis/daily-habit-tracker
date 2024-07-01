@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React, { useState } from 'react';
 import { FaCheck, FaTimes } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -22,7 +22,7 @@ const ViewWeekly = () => {
 		for (let i = 6; i >= 0; i--) {
 			const prevDate = new Date(currentDate);
 			prevDate.setDate(currentDate.getDate() - i);
-			const dayOfWeek = days[prevDate.getDate()];
+			const dayOfWeek = days[prevDate.getDay()];
 			const date = prevDate.getDate();
 			const month = prevDate.getMonth() +1;
 			previousDates.push({dayOfWeek, date, month });
@@ -34,7 +34,7 @@ const ViewWeekly = () => {
 
 	return (
 		<div>
-			<h4>Weekly Progress</h4>
+			<h4>Weekly Progress:</h4>
 			<table className="table table-bordered mt-5">
 				<thead>
 					<tr>
@@ -56,8 +56,8 @@ const ViewWeekly = () => {
 					 {Object.keys(habit.status).map((day) => (
 					 	<td key={day} className="text-center" style={{ cursor: 'pointer' }} onClick={() => toggleStatus(habitIndex, day)}>
 					 		{habit.status[day] ? (
-					 			<FaCheck className="text-success" title="Mark Undone" size={40} />
-					 			) : (
+					 			<FaCheck className="text-success" title="Mark undone" size={40} />
+					 		) : (
 					 			<FaTimes className="text-danger" title="Mark Done" size={40} />
 					 			)}
 					 		</td>
