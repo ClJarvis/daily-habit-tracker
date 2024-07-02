@@ -41,7 +41,7 @@ const ViewWeekly = () => {
 						<th className="bg-success text-white">Habit</th>
 						{previousDates.map((date, index) => ( 
 							<th className="bg-success text-white" key={index}>
-								{date.dayOfWeek} - {date.date}/{date.month}
+								{date.dayOfWeek} - {date.month}/{date.date}
 							</th>
 						))}
 					</tr>

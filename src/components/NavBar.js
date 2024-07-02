@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Navbar = () => {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-dark bg-success">
+		<nav className="navbar navbar-expand-lg navbar-dark bg-#2a2438">
 			<div className="conatiner">
 				<Link className="navbar-brand" to="/">Habit Tracker
 				</Link>

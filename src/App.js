@@ -8,20 +8,22 @@ import NavBar from './Components/NavBar';
 import AddHabit from './Components/AddHabit';
 import ViewWeekly from './Components/ViewWeekly';
 
+
 const App = () => {
   return (
     <>
+    <Router>
       <NavBar />
       <div className="container mt-5">
-      <Router>
         <Routes>
-          <Route exact path="/" element={<AddHabit />} />
-          <Route exact path="/view-weekly" element={<ViewWeekly />} />
+          <Route path="/" element={<AddHabit />} />
+          <Route path="/ViewWeekly" element={<ViewWeekly />} />
         </Routes>
-        </Router>
       </div>
+    </Router>
     </>
     );
   };
+
 
 export default App;

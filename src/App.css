@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar {
+background: #2a2438;
+}
+
+.navbar-brand {
+  padding-left: 20px;
+}
+
+.collapse, .navbar-collapse {
+  padding-left: 10px;
+}
