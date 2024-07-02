@@ -20,7 +20,7 @@ useEffect(() => {
 const handleSubmit = (e) => {
 	e.preventDefault();
 	if (!habit.trim()) {
-		alert('Habit name canot be empty!');
+		alert('Habit name cannot be empty!');
 		return;
 	}
 	if (editIndex !== null) {
@@ -30,7 +30,8 @@ const handleSubmit = (e) => {
 		setHabits(updatedHabits);
 		setEditIndex(null);
 		} else {
-			setHabits([...habits, { name: habit, description, status: { Monday: false, Tuesday: false, Wednesday: false, Thursday: false, Friday: false, Saturday: false, Sunday: false } }]);
+
+		  setHabits([...habits,{ name: habit, description, status: { Monday: false, Tuesday: false, Wednesday: false, Thursday: false, Friday: false, Saturday: false, Sunday: false } }]);
 		}
 		setHabit('');
 		setDescription('');
@@ -42,7 +43,7 @@ const removeHabit =(index) => {
 };
 
 const editHabit = (index) => {
-	setHabits(habits[index].name);
+	setHabit(habits[index].name);
 	setDescription(habits[index].description || '' );
 	setEditIndex(index);
 };
