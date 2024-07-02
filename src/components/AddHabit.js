@@ -70,7 +70,7 @@ return (
 					onChange={(e) => setDescription(e.target.value)} 
 				/>
 				</div>
-			<button type="submit" className="btn btn-primary">
+			<button type="submit" className="btn btn-warning">
 				{editIndex !== null ? 'Save' : 'Add'}
 			</button>
 		</form>
@@ -90,7 +90,7 @@ return (
 	              <td>{habit.name}</td>
 	              <td>{habit.description}</td>
 	              <td>
-	                <button className="btn btn-primary me-2" onClick={() => editHabit(index)}>
+	                <button className="btn btn-warning me-2" onClick={() => editHabit(index)}>
 	                  <AiOutlineEdit />
 	                </button>
 	                <button className="btn btn-danger" onClick={() => removeHabit(index)}>

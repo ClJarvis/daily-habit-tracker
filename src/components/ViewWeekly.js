@@ -38,10 +38,10 @@ const ViewWeekly = () => {
 			<table className="table table-bordered mt-5">
 				<thead>
 					<tr>
-						<th className="bg-success text-white">Habit</th>
+						<th className="bg-dark text-white">Habit</th>
 						{previousDates.map((date, index) => ( 
-							<th className="bg-success text-white" key={index}>
-								{date.dayOfWeek} - {date.month}/{date.date}
+							<th className="bg-dark text-white" key={index}>
+								{date.dayOfWeek} * {date.month}/{date.date}
 							</th>
 						))}
 					</tr>
