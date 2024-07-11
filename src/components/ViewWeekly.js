@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaCheck, FaTimes } from 'react-icons/fa';
+import { FaCheck, FaTimes, FaBan } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ViewWeekly = () => {
@@ -41,8 +41,7 @@ const ViewWeekly = () => {
 						<th className="bg-dark text-white">Habit</th>
 						{previousDates.map((date, index) => ( 
 							<th className="bg-dark text-white" key={index}>
-								{date.dayOfWeek} * {date.month}/{date.date}
-							</th>
+								{date.month}/{date.date} {date.dayOfWeek}</th>
 						))}
 					</tr>
 				</thead>
@@ -58,7 +57,7 @@ const ViewWeekly = () => {
 					 		{habit.status[day] ? (
 					 			<FaCheck className="text-success" title="Mark undone" size={40} />
 					 		) : (
-					 			<FaTimes className="text-danger" title="Mark Done" size={40} />
+					 			<FaBan className="text-danger" title="Mark Done" size={40} />
 					 			)}
 					 		</td>
 					 	))}
